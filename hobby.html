@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Hobby</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+		<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<div style="background-color:#191919;">
+			<nav>
+				<a href="index.html"><h2 class="logo">Azril<span>Hafiy</span></h2></a>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="biodata.html">Biodata</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="education.html">Education</a></li>
+					<li><a href="family.html">Family</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+				</ul>
+				<div class="dropdown">
+					<button class="dropbtn">Others <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a href="objective.html">Career Objective</a>
+					    <a href="skill.html">Skill & Language</a>
+						<a href="hobby.html">Hobby</a>
+						<a href="playlist.html">Playlist</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<section class="about">
+			<div class="main">
+				<div class="about-text">
+					<h2>My Hobby</h2>
+    				
+    				<div class="paragraph">
+
+    					<a target="_blank" href="https://m.mobilelegends.com/en">
+    					<img src="images/mobile_legends4.jfif" alt="Mobile Legends Gameplay">
+    					</a>
+    					<figcaption>Click the image above to the game homepage.</figcaption>
+
+    					<p style="text-indent: 30px; ">My hobby is <b><i>"playing a mobile games"</i></b>. Playing mobile games helps me to release my stress, also it relaxes me from a hard and long day of study and work. Playing mobile games helps me to unwind and have a good time. One of my favorite mobile games is <b><i>"Mobile Legends: Bang Bang"</i></b>.</p>
+						<br>
+						<p>Some of its benefits are:</p>
+						<ol>
+							<li><p>Improve the mood & develop a feeling of happiness.<p></li>
+							<li><p>Keep the brain stimulated & improves concentration.</p></li>
+							<li><p>Improves problem solving.</p></li>
+							<li><p>Available for people Of all ages</p></li>
+							<li><p>Improve Social Relationships & brings people together.</p></li>
+							<li><p>They Help Kids With Autism.</p></li>
+						</ol>
+						<br>
+						<video width="400" controls>
+	      					<source src="video/mobile_legends.mp4" type="video/mp4">
+	     				 	Your browser does not support HTML5 video.
+	    				</video>
+
+	 					<p style="text-indent: 30px;">
+						<b><i>"Mobile Legends: Bang Bang"</i></b> is a mobile multiplayer online battle arena game developed and published by Moonton, a subsidiary of ByteDance. Released in 2016, the game grew in popularity worldwide, most prominently in Southeast Asia, and has since crossed 1 billion downloads, with peak monthly players of 100 million.</p>
+
+						<p style="text-indent: 30px;">
+						At its core, the game pits 2 teams of 5 against each other in real time with at least 10-second matchmaking and 10-minute matches. Featuring traditional battle arena gameplay, players must fight over three lanes to take the enemy's tower and defend their own. Like classic MOBAs, there is no hero training to level up or pay to play angle—winners and losers are decided based on skill, ability, and strategy.</p>
+
+						<iframe src="https://www.youtube.com/embed/h7MQa-x0MLY?autoplay=1&mute=1" title="Mobile Legend Youtube." frameborder="0"  allowfullscreen></iframe>
+
+						<div class="gallery-container">
+	  						<div class="thumbnails"></div>
+	  						<div class="slides">
+						   		<div><a href="images/mobile_legends1.jpeg" data-lightbox="mygallery"><img src="images/mobile_legends1.jpeg"></a></div>
+						    	<div><a href="images/mobile_legends2.jpeg" data-lightbox="mygallery"><img src="images/mobile_legends2.jpeg"></a></div>
+						    	<div><a href="images/mobile_legends3.jfif" data-lightbox="mygallery"><img src="images/mobile_legends3.jfif"></a></div>
+						    	<div><a href="images/mobile_legends4.jfif" data-lightbox="mygallery"><img src="images/mobile_legends4.jfif"></a></div>
+
+							    <script type="text/javascript">
+									const slideGallery = document.querySelector('.slides');
+									const slides = slideGallery.querySelectorAll('div');
+									const thumbnailContainer = document.querySelector('.thumbnails');
+									const slideCount = slides.length;
+									const slideWidth = 540;
+
+									const highlightThumbnail = () => {
+									thumbnailContainer
+									.querySelectorAll('div.highlighted')
+									.forEach(el => el.classList.remove('highlighted'));
+									const index = Math.floor(slideGallery.scrollLeft / slideWidth);
+									thumbnailContainer
+									.querySelector(`div[data-id="${index}"]`)
+									.classList.add('highlighted');
+									};
+
+									const scrollToElement = el => {
+									const index = parseInt(el.dataset.id, 10);
+									slideGallery.scrollTo(index * slideWidth, 0);
+									};
+
+									thumbnailContainer.innerHTML += [...slides]
+									.map((slide, i) => `<div data-id="${i}"></div>`)
+									.join('');
+
+									thumbnailContainer.querySelectorAll('div').forEach(el => {
+									el.addEventListener('click', () => scrollToElement(el));
+									});
+
+									slideGallery.addEventListener('scroll', e => highlightThumbnail());
+
+									highlightThumbnail();
+								</script>
+	  						</div>
+	  					</div>
+	  					<figcaption>Click the image above to see a bigger picture.</figcaption>
+    				</div>	
+				</div>
+			</div>		
+		</section>
+		<footer>
+			<p class="text-shadow">Contact Me!</p>
+			<div class="social">
+				<a href="https://www.facebook.com/profile.php?id=100083424762853"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/azril.khr/"><i class="fab fa-instagram"></i></a>
+				<a href="https://wa.link/jqmxzo"><i class="fab fa-whatsapp"></i></a>
+			</div>
+			<p class="end">Copyright 2023&copy Muhammad Azril Hafiy bin Khairuddin. </p>
+		</footer>
+	</body>
+</html>

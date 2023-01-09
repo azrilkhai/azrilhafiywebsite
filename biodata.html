@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Biodata</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<div style="background-color:#191919;">
+			<nav>
+				<a href="index.html"><h2 class="logo">Azril<span>Hafiy</span></h2></a>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="biodata.html">Biodata</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="education.html">Education</a></li>
+					<li><a href="family.html">Family</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+				</ul>
+				<div class="dropdown">
+					<button class="dropbtn">Others <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a href="objective.html">Career Objective</a>
+					    <a href="skill.html">Skill & Language</a>
+						<a href="hobby.html">Hobby</a>
+						<a href="playlist.html">Playlist</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<section class="about">
+			<div class="main">
+				<img src="images/Personal.jfif">
+				<div class="about-text">
+					<h2>Biodata</h2>
+					<h4><b>Full Name:</b></h4>
+					<br>
+					<p>Muhammad Azril Hafiy bin Khairuddin</p>
+					<h4><b>Age:</b></h4>
+					<br>
+					<p> 
+						<script>
+							var dob = new Date("8/28/2001");  
+						    //calculate month difference from current date in time  
+						    var month_diff = Date.now() - dob.getTime();  
+						      
+						    //convert the calculated difference in date format  
+						    var age_dt = new Date(month_diff);   
+						      
+						    //extract year from date      
+						    var year = age_dt.getUTCFullYear();  
+						      
+						    //now calculate the age of the user  
+						    var age = Math.abs(year - 1970);  
+						      
+						    //display the calculated age  
+						    document.write(age + " years old");  
+						</script>  
+					</p>
+					<h4><b>Date of Birth:</b></h4>
+					<br>
+					<p>28<sup>th</sup> August 2001</p>
+					<h4><b>Religion:</b></h4>
+					<br>
+					<p>Islam</p>
+					<h4><b>Race:</b></h4>
+					<br>
+					<p>Malay</p>
+					<h4><b>Address:</b></h4>
+					<br>
+					<p>Lot PT2232 Taman Green Acres(Fasa 2) Kampung Tok Adis, 20400 Kuala Terengganu, Terengganu.</p>
+					<h4><b>Contact(Phone Number):</b></h4>
+					<br>
+					<p>+60139557891</p>
+					<h4><b>Contact(Email):</b></h4>
+					<br>
+					<p><a href="mailto:azrilkhai7@gmail.com" style="color: white;">azrilkhai7@gmail.com</a></p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="text-shadow">Contact Me!</p>
+			<div class="social">
+				<a href="https://www.facebook.com/profile.php?id=100083424762853"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/azril.khr/"><i class="fab fa-instagram"></i></a>
+				<a href="https://wa.link/jqmxzo"><i class="fab fa-whatsapp"></i></a>
+			</div>
+			<p class="end">Copyright 2023&copy Muhammad Azril Hafiy bin Khairuddin. </p>
+		</footer>
+	</body>
+</html>
